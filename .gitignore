@@ -1,0 +1,77 @@
+# OSX
+#
+.DS_Store
+
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+
+# Android/IJ
+#
+.idea
+.gradle
+local.properties
+
+release-env.sh
+
+# node.js
+#
+node_modules/
+npm-debug.log
+
+# Intellij
+*.iml
+
+# ios
+*.lock
+Pods/*
+ios/Pods*
+.DS_Store
+profile
+*~
+*.DS_Store
+*.swp
+*.out
+*.orig
+build/*
+*.pbxuser
+*.mode2v3
+*.mode1v3
+*.xcworkspace
+.LSOverride
+xcuserdata
+*.ipa
+
+# BUCK
+buck-out/
+\.buckd/
+android/app/libs
+android/keystores/debug.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
+
+ios/fastlane/report.xml
+ios/fastlane/screenshots
+ios/fastlane/test_output
+ios/output/
