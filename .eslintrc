@@ -60,5 +60,6 @@
         "no-multiple-empty-lines": ["error", {"max": 1}],
         "global-require" : 1,
         "object-shorthand" : 0,
+        "jsx-filename-extension" : 0,
     }
 }
