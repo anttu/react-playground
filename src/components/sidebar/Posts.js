@@ -53,7 +53,6 @@ class Posts extends Component {
                     </li>
                 </ul>
             </section>
-
         );
     }
 }
