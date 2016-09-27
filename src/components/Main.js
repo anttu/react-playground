@@ -1,10 +1,52 @@
 import React, { Component } from 'react';
 import '../template/future-imperfect/assets/css/main.css';
+import NewsService from '../services/NewsService';
+import Article from './Article';
 
 class Menu extends Component {
+
+    componentWillMount() {
+        this.setState({ articles: [] });
+    }
+
+    componentDidMount() {
+        NewsService.getRedditNews().then((response) => {
+            //console.log(response);
+            const articles = response.data.children.map((child) => {
+                const article = {};
+                article.title = child.data.title;
+                article.body = child.data.selftext;
+                article.author = child.data.author;
+                article.created = child.data.created_utc;
+                article.imageurl = child.data.url;
+                article.id = child.data.id;
+                return article;
+            });
+            //console.log(articles);
+            this.setState({ articles: articles });
+        });
+    }
+
     render() {
         return (
+
             <div id="main">
+
+                {
+                    this.state.articles.map((article) => {
+                        //console.log(article);
+                    return (
+                        <Article
+                            username={article.author}
+                            title={article.title}
+                            created={article.created}
+                            key={article.id}
+                            body={article.body}
+                            imageurl={article.imageurl}
+                        />
+                    );
+                    }
+                )}
 
                 <article className="post">
                     <header>
