@@ -5,7 +5,7 @@ class Header extends Component {
     render() {
         return (
             <header id="header">
-                <h1><a href="#">Future Imperfect</a></h1>
+                <h1><a href="#">Shreddit</a></h1>
                 <nav className="links">
                     <ul>
                         <li><a href="#">Lorem</a></li>
