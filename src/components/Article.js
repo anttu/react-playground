@@ -1,13 +1,11 @@
+import DateFormat from 'dateformat';
 import React, { Component } from 'react';
 import '../template/future-imperfect/assets/css/main.css';
 
 class Article extends Component {
 
     static propTypes = {
-        title: React.PropTypes.string,
-        username: React.PropTypes.string,
-        created: React.PropTypes.number,
-        body: React.PropTypes.string,
+        article: React.PropTypes.object,
     }
 
     constructor(props) {
@@ -32,23 +30,27 @@ class Article extends Component {
                 <header>
                     <div className="title">
                         <h2><a href="#">Magna sed adipiscing</a></h2>
-                        <p>{this.props.title}</p>
+                        <p>{this.props.article.title}</p>
                     </div>
                     <div className="meta">
-                        <time className="published" dateTime="2015-11-01">November 1, 2015</time>
-                        <a href="#" className="author"><span className="name">{this.props.username}</span><img src={ require ("../template/future-imperfect/images/avatar.jpg")} alt="" /></a>
+                        <time
+                            className="published"
+                            dateTime={`${DateFormat(this.props.article.created, 'yyyy-mm-dd')}`}>
+                                {DateFormat(this.props.article.created, 'dd mmmm yyyy')}
+                        </time>
+                        <a href="#" className="author"><span className="name">{this.props.article.username}</span><img src={ require ("../template/future-imperfect/images/avatar.jpg")} alt="" /></a>
                     </div>
                 </header>
 
                 <a href="#" className="image featured">
                     <img
-                        src={this.props.imageurl}
+                        src={this.props.article.imageurl}
                         onError={this.disableComponent}
                         alt=""
                     />
                 </a>
                 <p>
-                    {this.props.body||this.props.title}
+                    {this.props.article.body||this.props.article.title}
                 </p>
 
                 <footer>

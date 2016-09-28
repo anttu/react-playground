@@ -22,12 +22,8 @@ class Menu extends Component {
                 {
                     this.state.articles.map(article =>
                         <Article
-                            username={article.author}
-                            title={article.title}
-                            created={article.created}
+                            article={article}
                             key={article.id}
-                            body={article.body}
-                            imageurl={article.imageurl}
                         />
                     )
                 }
