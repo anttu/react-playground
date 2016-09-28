@@ -29,7 +29,7 @@ class Article extends Component {
             <article className="post">
                 <header>
                     <div className="title">
-                        <h2><a href="#">Magna sed adipiscing</a></h2>
+                        <h2><a href="#">{this.props.article.author}</a></h2>
                         <p>{this.props.article.title}</p>
                     </div>
                     <div className="meta">
@@ -38,7 +38,7 @@ class Article extends Component {
                             dateTime={`${DateFormat(this.props.article.created, 'yyyy-mm-dd')}`}>
                                 {DateFormat(this.props.article.created, 'dd mmmm yyyy')}
                         </time>
-                        <a href="#" className="author"><span className="name">{this.props.article.username}</span><img src={ require ("../template/future-imperfect/images/avatar.jpg")} alt="" /></a>
+                        <a href="#" className="author"><span className="name">{this.props.article.author}</span><img src={ require ("../template/future-imperfect/images/avatar.jpg")} alt="" /></a>
                     </div>
                 </header>
 
