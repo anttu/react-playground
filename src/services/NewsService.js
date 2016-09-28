@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Article from '../domain/Article';
 
 class NewsService {
 
@@ -7,7 +8,9 @@ class NewsService {
     We use Reddit's feeds due to their permissive CORS headers
     */
     getRedditNews() {
-        return axios.get('https://www.reddit.com/r/pics/.json').then(response => response.data);
+        return axios.get('https://www.reddit.com/r/pics/.json').then(
+            response => response.data.data.children.map(child => new Article(child))
+        );
     }
 }
 

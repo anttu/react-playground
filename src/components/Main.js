@@ -11,19 +11,7 @@ class Menu extends Component {
 
     componentDidMount() {
         NewsService.getRedditNews().then((response) => {
-            //console.log(response);
-            const articles = response.data.children.map((child) => {
-                const article = {};
-                article.title = child.data.title;
-                article.body = child.data.selftext;
-                article.author = child.data.author;
-                article.created = child.data.created_utc;
-                article.imageurl = child.data.url;
-                article.id = child.data.id;
-                return article;
-            });
-            //console.log(articles);
-            this.setState({ articles: articles });
+            this.setState({ articles: response });
         });
     }
 
