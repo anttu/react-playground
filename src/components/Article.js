@@ -10,7 +10,23 @@ class Article extends Component {
         body: React.PropTypes.string,
     }
 
+    constructor(props) {
+        super(props);
+        this.disableComponent = this.disableComponent.bind(this);
+    }
+
+    componentWillMount() {
+        this.setState({ display: true });
+    }
+
+    disableComponent() {
+        this.setState({ display: false });
+    }
+
     render() {
+
+        if (!this.state.display) return null;
+
         return (
             <article className="post">
                 <header>
@@ -24,7 +40,13 @@ class Article extends Component {
                     </div>
                 </header>
 
-                <a href="#" className="image featured"><img src={this.props.imageurl} alt="" /></a>
+                <a href="#" className="image featured">
+                    <img
+                        src={this.props.imageurl}
+                        onError={this.disableComponent}
+                        alt=""
+                    />
+                </a>
                 <p>
                     {this.props.body||this.props.title}
                 </p>
