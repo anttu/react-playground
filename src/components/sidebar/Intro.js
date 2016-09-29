@@ -7,8 +7,8 @@ class Intro extends Component {
             <section id="intro">
     			<a href="#" className="logo"><img src={require("../../template/future-imperfect/images/logo.jpg")} alt="" /></a>
     			<header>
-    				<h2>Future Imperfect</h2>
-    				<p>Another fine responsive site template in HTML5</p>
+    				<h2>Shreddit</h2>
+    				<p>ReactJS w/ Future Imperfect kitchen sink</p>
     			</header>
     		</section>
         );
