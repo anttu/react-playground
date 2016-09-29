@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - [npm test](#npm-test)
   - [npm run build](#npm-run-build)
 
-- [TODOs](#TODOs)
+- [TODOs](#todos)
 
 
 ## Available Scripts
@@ -48,6 +48,7 @@ Technologies to make use of:
 - [ ] WebGL
 - [ ] Websockets
 - [ ] Service workers
+- [ ] Web workers
 - [ ] Database storage
 - [ ] Speech Synthesis
 - [ ] Web notifications
