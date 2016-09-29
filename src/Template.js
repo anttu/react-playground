@@ -7,8 +7,8 @@ import Sidebar from './components/sidebar/Sidebar';
 
 class Template extends Component {
 
-    componentWillReceiveProps() {
-        this.setState({ page: this.props.params.splat });
+    componentWillReceiveProps(newProps) {
+        this.setState({ page: newProps.params.splat });
     }
 
     render() {
