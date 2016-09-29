@@ -1,4 +1,4 @@
-Shreddit - Kitchen sink with ES6, ReactJS, Axios
+Shreddit - Kitchen sink with ES6 and ReactJS
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
@@ -35,3 +35,19 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
+
+
+## TODOs
+
+Technologies to make use of:
+
+- [x] Ajax (axios)
+- [ ] Local caching
+- [ ] WebGL
+- [ ] Websockets
+- [ ] Service workers
+- [ ] Database storage
+- [ ] Speech Synthesis
+- [ ] Web notifications
+- [ ] P2P
+- [ ] CSP
