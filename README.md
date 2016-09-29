@@ -10,6 +10,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - [npm test](#npm-test)
   - [npm run build](#npm-run-build)
 
+- [TODOs](#TODOs)
+
 
 ## Available Scripts
 
@@ -50,4 +52,8 @@ Technologies to make use of:
 - [ ] Speech Synthesis
 - [ ] Web notifications
 - [ ] P2P
-- [ ] CSP
+- [x] Content security policy
+
+## Pitfalls:
+
+* Node server must be listening to port 3000 due to content security policy, as connect-src 'self' doesn't work with web sockets
