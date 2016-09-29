@@ -10,13 +10,12 @@ class Header extends Component {
                 <nav className="links">
                     <ul>
 
-                        <li><Link to='/pics'>pics</Link></li>
-                        <li><Link to='/aww'>aww</Link></li>
-                        <li><a href="#">Lorem</a></li>
-                        <li><a href="#">Ipsum</a></li>
-                        <li><a href="#">Feugiat</a></li>
-                        <li><a href="#">Tempus</a></li>
-                        <li><a href="#">Adipiscing</a></li>
+                        <li><Link to='/rocketleague'>Rocket League</Link></li>
+                        <li><Link to='/pics'>Pics</Link></li>
+                        <li><Link to='/aww'>Aww</Link></li>
+                        <li><Link to='/gaming'>Gaming</Link></li>
+                        <li><Link to='/images'>Images</Link></li>
+                        <li><Link to='/memes'>Memes</Link></li>
                     </ul>
                 </nav>
                 <nav className="main">
