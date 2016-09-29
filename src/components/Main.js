@@ -10,7 +10,15 @@ class Menu extends Component {
     }
 
     componentDidMount() {
-        NewsService.getRedditNews().then((response) => {
+        this.getNews(this.props.page);
+    }
+
+    componentWillReceiveProps(newProps) {
+        this.getNews(newProps.page);
+    }
+
+    getNews(page) {
+        NewsService.getRedditNews(page).then((response) => {
             this.setState({ articles: response });
         });
     }

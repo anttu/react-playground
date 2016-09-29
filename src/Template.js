@@ -6,6 +6,11 @@ import Main from './components/Main';
 import Sidebar from './components/sidebar/Sidebar';
 
 class Template extends Component {
+
+    componentWillReceiveProps() {
+        this.setState({ page: this.props.params.splat });
+    }
+
     render() {
         return (
             <div id="wrapper">
@@ -14,7 +19,7 @@ class Template extends Component {
 
                 <Menu />
 
-                <Main />
+                <Main page={this.state ? this.state.page : undefined} />
 
                 <Sidebar />
 

@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import '../template/future-imperfect/assets/css/main.css';
+import { Link } from 'react-router'
 
 class Header extends Component {
     render() {
         return (
             <header id="header">
-                <h1><a href="#">Shreddit</a></h1>
+                <h1><a href="/">Shreddit</a></h1>
                 <nav className="links">
                     <ul>
+
+                        <li><Link to='/pics'>pics</Link></li>
+                        <li><Link to='/aww'>aww</Link></li>
                         <li><a href="#">Lorem</a></li>
                         <li><a href="#">Ipsum</a></li>
                         <li><a href="#">Feugiat</a></li>
